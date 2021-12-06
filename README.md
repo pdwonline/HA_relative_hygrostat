@@ -8,6 +8,7 @@ This implementation switches based on a relitive humidity trend, whereas the gen
 
 ## Setup
 In your `configuration.yaml` you'll need:
+
 ...
 binary_sensor:
 - platform: relative_hygrostat
@@ -20,6 +21,7 @@ binary_sensor:
   sample_interval: 300 # Optional time between taking humidity samples in seconds, default 300 seconds
   min_humidity: 30 # Optional minimum humidity to enable dehumidification. Default = 0
 ...
+
 This will create a binary sensor called `binary_sensor.bathroom_hygrostat`. Next, add some automations to switch your fan:
 
 ...
