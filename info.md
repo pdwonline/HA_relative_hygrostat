@@ -44,8 +44,3 @@ automation:
     - service: switch.turn_off
       entity_id: switch.fan
 ```
-
-
-## Installation
-#### Manual
-Put the [`binary_sensor.py`](relative_hygrostat/binary_sensor.py) in your home-assistant config directory under `custom_components/relative_hygrostat`.
