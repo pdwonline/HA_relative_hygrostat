@@ -8,7 +8,6 @@ This is actually a fork of [github.com/basschipper/homeassistant-generic-hygrost
 This implementation switches based on a relitive humidity trend, whereas the generic HA hygrostat switches between a static humidity range. Due to the fact that humidity levels are different during the summer and winter, a static humidity level switch is very complicated and requires outside temperature and humidity sensors to be involved. This binary_sensor detects just the high rises in humidity and switches on. It switches off when the humidity is back to normal. Therefore, it is very usefull for controlling a fan based on humidity.
 
 ##Setup
-
 In your `configuration.yaml` you'll need:
 ...
 binary_sensor:
