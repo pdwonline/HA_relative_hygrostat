@@ -1,0 +1,5 @@
+{
+  "name": "Relative Hygrostat",
+  "render_readme": false,
+  "domains": ["sensor"]
+}
