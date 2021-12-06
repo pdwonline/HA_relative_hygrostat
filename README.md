@@ -4,6 +4,7 @@ Home Assistant binary hygrostat based on humidity trend
 This is actually a fork of [github.com/basschipper/homeassistant-generic-hygrostat](https://github.com/basschipper/homeassistant-generic-hygrostat). Since there is a name conflict with the introduced HA integration [Generic Hygrostat](https://www.home-assistant.io/integrations/generic_hygrostat/), I renamed the component and made it available here.
 
 ## How does this differ from the HA Generic Hygorostat?
+
 This implementation switches based on a relitive humidity trend, whereas the generic HA hygrostat switches between a static humidity range. Due to the fact that humidity levels are different during the summer and winter, a static humidity level switch is very complicated and requires outside temperature and humidity sensors to be involved. This binary_sensor detects just the high rises in humidity and switches on. It switches off when the humidity is back to normal. Therefore, it is very usefull for controlling a fan based on humidity.
 
 ##Setup
