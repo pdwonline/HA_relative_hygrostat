@@ -1,0 +1,12 @@
+{
+  "domain": "relative_hygrostat",
+  "name": "Relative Hygrostat",
+  "documentation": "https://github.com/pdwonline/HA_relative_hygrostat",
+  "dependencies": [],
+  "codeowners": [
+    "@basschipper",
+    "@pauldewit"
+  ],
+  "requirements": [],
+  "version": "1.0.0"
+}
