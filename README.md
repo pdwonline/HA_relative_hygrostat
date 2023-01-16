@@ -28,23 +28,31 @@ This will create a binary sensor called `binary_sensor.bathroom_hygrostat`. Next
 
 ```yaml
 automation:
-- alias: Bathroom Hygrostat On
+- id: '1234youruniqueID1234'
+  alias: Bathroom fan controler
+  description: Fan control for bathroom
+  mode: single
   trigger:
-    platform: state
-    entity_id: binary_sensor.bathroom_hygrostat
-    to: 'on'
+  - platform: state
+    entity_id:
+    - binary_sensor.bathroom_hygrostat
+  condition: []
   action:
-    - service: switch.turn_on
-      entity_id: switch.fan
-
-- alias: Bathroom Hygrostat Off
-  trigger:
-    platform: state
-    entity_id: binary_sensor.bathroom_hygrostat
-    to: 'off'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.fan
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.bathroom_hygrostat
+        state: 'on'
+      sequence:
+      - service: switch.turn_on
+        data: {}
+        target:
+        entity_id: switch.bathroom_fan
+    default:
+      - service: switch.turn_off
+        data: {}
+        target:
+        entity_id: switch.bathroom_fan
 ```
 
 ## Installation
